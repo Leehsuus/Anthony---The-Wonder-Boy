@@ -24,90 +24,90 @@ def descomprimir_imagem(imagem_comprimida):
 
 
 def chamar_descompressao_imagens():
-    creditos_descomprimido = descomprimir_imagem('/home/leticia/PycharmProjects/projetos/Supermanas II/'
+    creditos_descomprimido = descomprimir_imagem(''
                                                  'imagens_compressao/creditos_comprimido.png')
-    gameover_descomprimido = descomprimir_imagem('/home/leticia/PycharmProjects/projetos/Supermanas II/'
+    gameover_descomprimido = descomprimir_imagem(''
                                                  'imagens_compressao/gameover_comprimido.png')
-    inicio_descomprimido = descomprimir_imagem('/home/leticia/PycharmProjects/projetos/Supermanas II/'
+    inicio_descomprimido = descomprimir_imagem(''
                                                'imagens_compressao/inicio_comprimido.png')
-    selecao_1_descomprimido = descomprimir_imagem('/home/leticia/PycharmProjects/projetos/Supermanas II/'
+    selecao_1_descomprimido = descomprimir_imagem(''
                                                   'imagens_compressao/selecao_1_comprimido.png')
-    selecao_2_descomprimido = descomprimir_imagem('/home/leticia/PycharmProjects/projetos/Supermanas II/'
+    selecao_2_descomprimido = descomprimir_imagem(''
                                                   'imagens_compressao/selecao_2_comprimido.png')
-    stan_lee_descomprimido = descomprimir_imagem('/home/leticia/PycharmProjects/projetos/Supermanas II/'
+    stan_lee_descomprimido = descomprimir_imagem(''
                                                  'imagens_compressao/stan_lee_comprimido.png')
 
-    open('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/creditos.png', 'wb'). \
+    open('imagens_compressao/creditos.png', 'wb'). \
         write(creditos_descomprimido)
-    open('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/gameover.png', 'wb'). \
+    open('imagens_compressao/gameover.png', 'wb'). \
         write(gameover_descomprimido)
-    open('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/inicio.png', 'wb'). \
+    open('imagens_compressao/inicio.png', 'wb'). \
         write(inicio_descomprimido)
-    open('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/selecao_1.png', 'wb'). \
+    open('imagens_compressao/selecao_1.png', 'wb'). \
         write(selecao_1_descomprimido)
-    open('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/selecao_2.png', 'wb'). \
+    open('imagens_compressao/selecao_2.png', 'wb'). \
         write(selecao_2_descomprimido)
-    open('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/stan_lee_tributo.png', 'wb'). \
+    open('imagens_compressao/stan_lee_tributo.png', 'wb'). \
         write(stan_lee_descomprimido)
 
-    pasta = '/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao'
+    pasta = 'imagens_compressao'
     procura_imagem = os.listdir(pasta)
 
     for img in procura_imagem:
         if img == 'creditos_comprimido.png':
-            os.remove('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/{}'.format(img))
+            os.remove('imagens_compressao/{}'.format(img))
         elif img == 'gameover_comprimido.png':
-            os.remove('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/{}'.format(img))
+            os.remove('imagens_compressao/{}'.format(img))
         elif img == 'inicio_comprimido.png':
-            os.remove('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/{}'.format(img))
+            os.remove('imagens_compressao/{}'.format(img))
         elif img == 'selecao_1_comprimido.png':
-            os.remove('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/{}'.format(img))
+            os.remove('imagens_compressao/{}'.format(img))
         elif img == 'selecao_2_comprimido.png':
-            os.remove('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/{}'.format(img))
+            os.remove('imagens_compressao/{}'.format(img))
         elif img == 'stan_lee_comprimido.png':
-            os.remove('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/{}'.format(img))
+            os.remove('imagens_compressao/{}'.format(img))
 
 
 def chamar_compressao_imagem():
     creditos_comprimido = \
-        comprimir_imagem('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/creditos.png')
+        comprimir_imagem('imagens_compressao/creditos.png')
     gameover_comprimido = \
-        comprimir_imagem('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/gameover.png')
+        comprimir_imagem('imagens_compressao/gameover.png')
     inicio_comprimido = \
-        comprimir_imagem('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/inicio.png')
+        comprimir_imagem('imagens_compressao/inicio.png')
     selecao_1_comprimido = \
-        comprimir_imagem('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/selecao_1.png')
+        comprimir_imagem('imagens_compressao/selecao_1.png')
     selecao_2_comprimido = \
-        comprimir_imagem('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/selecao_2.png')
+        comprimir_imagem('imagens_compressao/selecao_2.png')
     stan_lee_comprimido = \
-        comprimir_imagem('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/stan_lee_tributo.png')
+        comprimir_imagem('imagens_compressao/stan_lee_tributo.png')
 
-    open('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/creditos_comprimido.png', 'wb') \
+    open('imagens_compressao/creditos_comprimido.png', 'wb') \
         .write(creditos_comprimido)
-    open('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/gameover_comprimido.png', 'wb') \
+    open('imagens_compressao/gameover_comprimido.png', 'wb') \
         .write(gameover_comprimido)
-    open('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/inicio_comprimido.png', 'wb') \
+    open('imagens_compressao/inicio_comprimido.png', 'wb') \
         .write(inicio_comprimido)
-    open('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/selecao_1_comprimido.png', 'wb') \
+    open('imagens_compressao/selecao_1_comprimido.png', 'wb') \
         .write(selecao_1_comprimido)
-    open('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/selecao_2_comprimido.png', 'wb') \
+    open('imagens_compressao/selecao_2_comprimido.png', 'wb') \
         .write(selecao_2_comprimido)
-    open('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/stan_lee_comprimido.png', 'wb') \
+    open('imagens_compressao/stan_lee_comprimido.png', 'wb') \
         .write(stan_lee_comprimido)
 
-    pasta = '/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao'
+    pasta = 'imagens_compressao'
     procura_imagem = os.listdir(pasta)
 
     for img in procura_imagem:
         if img == 'creditos.png':
-            os.remove('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/{}'.format(img))
+            os.remove('imagens_compressao/{}'.format(img))
         elif img == 'gameover.png':
-            os.remove('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/{}'.format(img))
+            os.remove('imagens_compressao/{}'.format(img))
         elif img == 'inicio.png':
-            os.remove('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/{}'.format(img))
+            os.remove('imagens_compressao/{}'.format(img))
         elif img == 'selecao_1.png':
-            os.remove('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/{}'.format(img))
+            os.remove('imagens_compressao/{}'.format(img))
         elif img == 'selecao_2.png':
-            os.remove('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/{}'.format(img))
+            os.remove('imagens_compressao/{}'.format(img))
         elif img == 'stan_lee_tributo.png':
-            os.remove('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/{}'.format(img))
+            os.remove('imagens_compressao/{}'.format(img))

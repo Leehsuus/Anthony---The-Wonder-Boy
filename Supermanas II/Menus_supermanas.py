@@ -37,9 +37,9 @@ def mostrar_menu_inicial(indice_menu_func, pos_y_func, estado, mult = 1):
 chamar_descompressao_imagens()
 pg.init()
 
-bg_menu_inicial = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/inicio.png')
-seta = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/seta.png')
-seta_dois = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/seta_2.png')
+bg_menu_inicial = pg.image.load('imagens_compressao/inicio.png')
+seta = pg.image.load('Imagens/seta.png')
+seta_dois = pg.image.load('Imagens/seta_2.png')
 pos_x, pos_y = 150, 240
 pos_x_seta_2, pos_y_seta_2 = 100, 130
 pos_x_inicial, pos_x_limite = 100, 500

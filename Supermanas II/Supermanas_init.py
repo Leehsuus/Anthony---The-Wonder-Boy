@@ -26,7 +26,7 @@ class Personagem(pg.sprite.Sprite):
         self.sangue = 15
         self.especial = 0
         self.divisor_fase = 2
-        self.sprite_andando = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/'
+        self.sprite_andando = pg.image.load('Imagens/'
                                             'personagem_andando.png')
         self.anthony = [0, 1, 2, 3, 4]
         self.frame = 0
@@ -90,7 +90,7 @@ class Personagem(pg.sprite.Sprite):
                 if event.key == pg.K_UP:
                     if len(collision_list) >= 1:
                         self.vspeed = (-self.speed) * 1.6
-                if event.key == pg.K_e and self.especial == 8:
+                if event.key == pg.K_LSHIFT and self.especial == 8:
                     if self.image == personagem_parado_LD or self.estado == "andando dir":
                         som_tiro_especial_anthony.play()
                         self.especial = self.especial - 8
@@ -118,7 +118,7 @@ class Personagem(pg.sprite.Sprite):
                             t.image = tiro_especial_personagem_imagem
                             objetos_ativos.add(t)
 
-                if self.rect.colliderect(box_aleatoria.rect) and event.key == pg.K_b:
+                if self.rect.colliderect(box_aleatoria.rect) and event.key == pg.K_LCTRL:
                     sorteio_box_aleatoria = r.randint(1, 3)
                     # som_abrir_caixa.play()
 
@@ -206,7 +206,7 @@ class Blocos(pg.sprite.Sprite):
 
     def set_image(self, filename=None):
         if filename is not None:
-            self.image = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/{}'
+            self.image = pg.image.load('Imagens/{}'
                                        .format(filename)).convert_alpha()
 
     def set_new_box_position(self):
@@ -255,7 +255,7 @@ class Inimigos(pg.sprite.Sprite):
 
     def set_image(self, filename=None):
         if filename is not None:
-            self.image = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/{}'
+            self.image = pg.image.load('Imagens/{}'
                                        .format(filename)).convert_alpha()
 
         return self.image
@@ -310,7 +310,7 @@ class Tiro(pg.sprite.Sprite):
 
     def set_image(self, filename=None):
         if filename is not None:
-            self.image = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/{}'
+            self.image = pg.image.load('Imagens/{}'
                                        .format(filename))
 
     def criar_tiro(self):
@@ -394,26 +394,26 @@ if __name__ == "__main__":
     tela = pg.display.set_mode(tamanho_tela)
 
     # Background
-    bg = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/base_fundo_posicoes.png') \
+    bg = pg.image.load('Imagens/base_fundo_posicoes.png') \
         .convert_alpha()
-    bg_dois = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/fundo_2.png').convert_alpha()
+    bg_dois = pg.image.load('Imagens/fundo_2.png').convert_alpha()
     bg_largura, bg_altura = bg.get_rect().size
     fase_largura = bg_largura
     fase_pos_x = 0
     start_scrolling_pos_x = largura / 2
-    selecao_tela = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/'
+    selecao_tela = pg.image.load('imagens_compressao/'
                                  'selecao_1.png').convert_alpha()
-    selecao_tela_dois = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/'
+    selecao_tela_dois = pg.image.load('imagens_compressao/'
                                       'selecao_2.png').convert_alpha()
-    tela_creditos = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/'
+    tela_creditos = pg.image.load('imagens_compressao/'
                                   'creditos.png').convert_alpha()
-    tela_como_jogar = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/como_jogar.png') \
+    tela_como_jogar = pg.image.load('Imagens/como_jogar.png') \
         .convert_alpha()
-    tela_game_over = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/'
+    tela_game_over = pg.image.load('imagens_compressao/'
                                    'gameover.png').convert_alpha()
-    tela_tributo_stan_lee = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/imagens_compressao/'
+    tela_tributo_stan_lee = pg.image.load('imagens_compressao/'
                                           'stan_lee_tributo.png').convert_alpha()
-    sprite_sheet_barra_hp = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/barra_hp.png')
+    sprite_sheet_barra_hp = pg.image.load('Imagens/barra_hp.png')
 
     # Textos
     fonte = pg.font.SysFont("Comic Sans MS", 20, True)
@@ -427,20 +427,20 @@ if __name__ == "__main__":
     anthony = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     frame = 0
     estado_anthony = "transforma"
-    sprite_sheet_anthony = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/personagem.png')
+    sprite_sheet_anthony = pg.image.load('Imagens/personagem.png')
     personagem.set_position(personagem.rect.x, personagem.personagem_pos_y)
     personagem_parado_LD = None
     personagem_parado_LE = None
-    tiro_personagem_imagem = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/'
+    tiro_personagem_imagem = pg.image.load('Imagens/'
                                            'tiro_tony.png').convert_alpha()
-    tiro_especial_personagem_imagem = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/'
+    tiro_especial_personagem_imagem = pg.image.load('Imagens/'
                                                     'tiro_especial.png').convert_alpha()
 
     # Inimigos
     inimigo_teste = Inimigos()
     inimigo_LE = pg.transform.scale(inimigo_teste.set_image('soldado.png'), (51, 60))
     inimigo_LD = pg.transform.flip(inimigo_LE, True, False)
-    tiro_inimigo_imagem = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/tiro_soldado.png')
+    tiro_inimigo_imagem = pg.image.load('Imagens/tiro_soldado.png')
     laser = Tiro(25, 310)
     laser.set_image("laser.png")
     laser.set_position(593, 0)
@@ -449,17 +449,17 @@ if __name__ == "__main__":
     laser_2.set_position(3666, 0)
 
     # Sons
-    som_tiro_anthony = pg.mixer.Sound('/home/leticia/PycharmProjects/projetos/Supermanas II/Sons/tiro_anthony.wav')
-    som_tiro_inimigos = pg.mixer.Sound('/home/leticia/PycharmProjects/projetos/Supermanas II/Sons/tiro_inimigos.wav')
-    som_selecao_menus = pg.mixer.Sound('/home/leticia/PycharmProjects/projetos/Supermanas II/Sons/selecao_menus.wav')
-    som_transformacao_anthony = pg.mixer.Sound('/home/leticia/PycharmProjects/projetos/Supermanas II/Sons/'
+    som_tiro_anthony = pg.mixer.Sound('Sons/tiro_anthony.wav')
+    som_tiro_inimigos = pg.mixer.Sound('Sons/tiro_inimigos.wav')
+    som_selecao_menus = pg.mixer.Sound('Sons/selecao_menus.wav')
+    som_transformacao_anthony = pg.mixer.Sound('Sons/'
                                                'Transformação Anthony.wav')
-    som_tributo_stan_lee = pg.mixer.Sound('/home/leticia/PycharmProjects/projetos/Supermanas II/Sons/'
+    som_tributo_stan_lee = pg.mixer.Sound('Sons/'
                                           'Tributo_stan_lee.wav')
     som_anthony_trans = False
-    som_confirmar_opcao_menu = pg.mixer.Sound('/home/leticia/PycharmProjects/projetos/Supermanas II/Sons/'
+    som_confirmar_opcao_menu = pg.mixer.Sound('Sons/'
                                               'confirmar_opcao_menu.wav')
-    som_tiro_especial_anthony = pg.mixer.Sound('/home/leticia/PycharmProjects/projetos/Supermanas II/Sons/'
+    som_tiro_especial_anthony = pg.mixer.Sound('Sons/'
                                                'tiro_especial_anthony.wav')
 
     # Pontuações
@@ -781,29 +781,29 @@ if __name__ == "__main__":
     objetos_ativos.add(personagem)
 
     # Definição de barra de vida e barra de especial
-    barra_especial = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/'
+    barra_especial = pg.image.load('Imagens/'
                                    'barra_especial.png').convert_alpha()
-    barra_especial_1 = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/'
+    barra_especial_1 = pg.image.load('Imagens/'
                                      'barra_especial_1.png').convert_alpha()
-    barra_especial_2 = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/'
+    barra_especial_2 = pg.image.load('Imagens/'
                                      'barra_especial_2.png').convert_alpha()
-    barra_especial_3 = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/'
+    barra_especial_3 = pg.image.load('Imagens/'
                                      'barra_especial_3.png').convert_alpha()
-    barra_especial_4 = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/'
+    barra_especial_4 = pg.image.load('Imagens/'
                                      'barra_especial_4.png').convert_alpha()
-    barra_especial_5 = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/'
+    barra_especial_5 = pg.image.load('Imagens/'
                                      'barra_especial_5.png').convert_alpha()
-    barra_especial_6 = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/'
+    barra_especial_6 = pg.image.load('Imagens/'
                                      'barra_especial_6.png').convert_alpha()
-    barra_especial_7 = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/'
+    barra_especial_7 = pg.image.load('Imagens/'
                                      'barra_especial_7.png').convert_alpha()
-    barra_especial_8 = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/'
+    barra_especial_8 = pg.image.load('Imagens/'
                                      'barra_especial_8.png').convert_alpha()
-    vida_1 = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/vida_1.png').convert_alpha()
-    vida_2 = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/vida_2.png').convert_alpha()
-    vida_3 = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/vida_3.png').convert_alpha()
-    vida_4 = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/vida_4.png').convert_alpha()
-    vida_5 = pg.image.load('/home/leticia/PycharmProjects/projetos/Supermanas II/Imagens/vida_5.png').convert_alpha()
+    vida_1 = pg.image.load('Imagens/vida_1.png').convert_alpha()
+    vida_2 = pg.image.load('Imagens/vida_2.png').convert_alpha()
+    vida_3 = pg.image.load('Imagens/vida_3.png').convert_alpha()
+    vida_4 = pg.image.load('Imagens/vida_4.png').convert_alpha()
+    vida_5 = pg.image.load('Imagens/vida_5.png').convert_alpha()
 
     barra_especial_padrao = None
     vidas_padrao = None

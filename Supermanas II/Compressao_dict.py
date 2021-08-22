@@ -1,6 +1,6 @@
-arq_um = open("/home/leticia/PycharmProjects/projetos/Supermanas II/arq_1", "r")
-arq_dois = open("/home/leticia/PycharmProjects/projetos/Supermanas II/arq_2", "w")
-arq_tres = open("/home/leticia/PycharmProjects/projetos/Supermanas II/arq_3", "w")
+arq_um = open("arq_1", "r")
+arq_dois = open("arq_2", "w")
+arq_tres = open("arq_3", "w")
 arq_lido = arq_um.read()
 contador = 0
 dicionario = {}
@@ -27,7 +27,7 @@ for i in compressao:
     arq_dois.write(str(i))
 print(dicionario)
 
-arq_dois = open("/home/leticia/PycharmProjects/projetos/Supermanas II/arq_2", "r")
+arq_dois = open("arq_2", "r")
 arq_lido_dois = arq_dois.read()
 
 cont = 0
